@@ -1,0 +1,26 @@
+<!--components/recordBoxTime/RecordBoxTime.wxml-->
+<view class = "RecordBoxDate">
+    <view class = "container {{ isSelected ? 'selected' : ''}}" bindlongpress="onLongTap">
+        <view class = "item">
+            <text class = "title">时间</text>
+            <picker mode="time" value="{{timePickerValue}}" bindchange="bindTimeChange">
+                 <!-- <text wx:if="{{timeRecord && timeRecord.time}}" class = "content">{{timePickerValue}}</text>
+                 <text wx:else class = "content">-</text> -->
+                 <text wx:if = "{{!time || time.equal('')}}">-</text>
+                 <text wx:else>{{timePickerValue}}</text>
+            </picker>
+        </view>
+
+        <view class = "item">
+            <text class = "title">{{title}}</text>
+            <view class = "content">
+                <input class="peeValueInput" bindblur="bindInputBlur" type="number" value="{{displayValue}}" placeholder="-"/>
+                <text>{{measure}}</text>
+            </view>
+        </view>
+        <button class = "deleteButton {{displayDeleteButton ? 'show' : ''}}" catch:tap = "onDelete">
+            删除
+        </button>
+        <view class = "hiddenLayer {{displayDeleteButton ? 'show' : ''}}" catch:tap="hideDeleteButton"></view>
+    </view>
+</view>

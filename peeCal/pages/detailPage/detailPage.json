@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+     "RecordBoxTime": "../../components/recordBoxTime/RecordBoxTime"
+  },
+  "enablePullDownRefresh": true
+}

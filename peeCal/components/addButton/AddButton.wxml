@@ -1,0 +1,7 @@
+<!--components/addButton/AddButton.wxml-->
+<view>
+    <view class = "content">
+        <view class = "horitontalBar"></view>
+        <view class = "vertialBar"></view>
+    </view>
+</view>

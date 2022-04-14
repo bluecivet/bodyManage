@@ -1,0 +1,37 @@
+<!--pages/detailPage/detailPage.wxml-->
+<view>
+    <view class = "header">
+        <view class = "date">{{dateRecord.date.year}}年{{dateRecord.date.month}}月{{dateRecord.date.day}}日</view>
+        <view class = "peeTotal">{{dateRecord.peeTotal}}ml</view>
+    </view>
+
+    <view class = "body">
+        <view class = "list">
+            <!-- <RecordBoxTime wx:for="{{dateRecord.timeRecord}}" wx:key="id"
+                timeRecord = "{{item}}"
+                data-index = "{{index}}"
+                bind:timeChange = "onTimeChange"
+                bind:inputBlur = "onInputBlur"
+            /> -->
+            <!-- <RecordBoxTime currentTime="{{currentTime}}"
+                data-index = "{{-1}}"
+                bind:timeChange = "onTimeChange"
+                bind:inputBlur = "onInputBlur"
+            /> -->
+
+
+            <RecordBoxTime wx:for="{{dateRecord.timeRecord}}" wx:key="id"
+                time = "{{item.time ? item.time.hour + ':' + item.time.min : null}}"
+                title = "尿量"
+                value = "{{item.peeValue || null}}"
+                measure = "ml"
+                data-index = "{{index}}"
+                bind:timeChange = "onTimeChange"
+                bind:inputBlur = "onInputBlur"
+                bind:deleteTime = "onDeleteTime"
+            />
+
+
+        </view>
+    </view>
+</view>

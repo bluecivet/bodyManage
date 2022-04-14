@@ -1,0 +1,17 @@
+/* pages/detailPage/detailPage.wxss */
+
+.header 
+{
+    text-align: center;
+}
+
+.header .date
+{
+    font-size: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.header .peeTotal
+{
+    font-weight: 700
+}

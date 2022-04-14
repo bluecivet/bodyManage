@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "RecordBoxDate": "../../components/recordBoxDate/RecordBoxDate",
+    "AddButton": "../../components/addButton/AddButton"
+  }
+}

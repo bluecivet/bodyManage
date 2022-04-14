@@ -1,0 +1,23 @@
+<!--components/recordBoxDate/RecordBoxDate.wxml-->
+<view class = "RecordBoxDate">
+    <view class = "container {{ isSelected ? 'selected' : ''}}" bindlongpress="onLongTap">
+        <view class = "item">
+            <text class = "title">日期</text>
+            <view class = "content" catchtap = "doNothing">
+                <picker mode = "date" value = "{{datePickerValue}}" bindchange = "onDateChange">
+                    <text>{{displayDate}}</text>
+                </picker>
+            </view>
+            <!-- <text class = "content">{{dateRecord.date.year}}年{{dateRecord.date.month}}月{{dateRecord.date.day}}日</text> -->
+        </view>
+
+        <view class = "item">
+            <text class = "title">{{title}}</text>
+            <text class = "content">{{displayValue}}{{measure}}</text>
+        </view>
+        <button class = "deleteButton {{displayDeleteButton ? 'show' : ''}}" catch:tap = "onDelete">
+            删除
+        </button>
+        <view class = "hiddenLayer {{displayDeleteButton ? 'show' : ''}}" catch:tap="hideDeleteButton"></view>
+    </view>
+</view>

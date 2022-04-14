@@ -1,0 +1,36 @@
+/* components/addButton/AddButton.wxss */
+
+.content
+{
+    background-color: green;
+    border-radius: 100%;
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    top: 70%;
+    left: 600rpx;
+}
+
+
+.horitontalBar, .vertialBar
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+
+.horitontalBar
+{
+    width: 60%;
+    height: 10%;
+}
+
+.vertialBar 
+{
+    width: 10%;
+    height: 60%;
+    top: 40%;
+}

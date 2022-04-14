@@ -1,0 +1,24 @@
+<!--index.wxml-->
+  <view class = "wrapper">
+    <view class = "header">
+      <text>尿量记录</text>
+    </view>
+
+    <view class = "body">
+      <view class = "list">
+        <RecordBoxDate wx:for="{{dateRecord}}" wx:key="id"
+          dateRecord = "{{item}}"
+          date = "{{item.date}}"
+          value = "{{item.peeTotal}}"
+          title = "总量"
+          measure = "ml"
+          data-index = "{{index}}"
+          bindtap = "gotoDateDetail"
+          bind:dateChange = "onDateChange"
+          bind:deleteDate = "onDelete"
+          />
+      </view>
+    </view>
+
+    <AddButton bind:tap = "onAddButtonClick"></AddButton>
+  </view>

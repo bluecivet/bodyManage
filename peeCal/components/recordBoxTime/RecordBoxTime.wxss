@@ -1,0 +1,74 @@
+/* components/recordBoxTime/RecordBoxTime.wxss */
+
+.RecordBoxDate .container
+{
+    display: flex;
+    padding: 2rpx;
+    margin: 10rpx 20rpx;
+    border: 1rpx solid #000;
+    font-size: 40rpx;
+    text-align: center;
+    border-radius: 20rpx;
+    background-color: #eeeeee;
+    position: relative;
+}
+
+.RecordBoxDate .container .item
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5rpx;
+}
+
+.RecordBoxDate .container .item .title
+{
+    font-size: 30rpx;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+}
+
+.content input
+{
+    width: 100rpx;
+}
+
+.deleteButton
+{
+    position: absolute;
+    width: 200rpx !important;
+    padding: 20rpx;
+    left: 500rpx;
+    top: 114rpx;
+    z-index: 3;
+    box-shadow: 0 0 10rpx 5rpx #999;
+    display: none;
+}
+
+.show
+{
+    display: block !important;
+}
+
+.selected
+{
+    background-color: #ccc;
+}
+
+.hiddenLayer
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    top: 0px;
+    left: 0px;
+    width: 100vh;
+    height: 100vh;
+    z-index: 2;
+}
+
